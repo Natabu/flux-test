@@ -1,0 +1,2 @@
+bases: 
+  - git::https://github.com/Natabu/flux-test.git/manifests
