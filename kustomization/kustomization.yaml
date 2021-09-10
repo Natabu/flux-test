@@ -4,3 +4,5 @@ resources:
   - ../manifests/ingress-service.yaml
   - ../manifests/nginx-deployment.yaml
   - ../manifests/nginx-service.yaml
+patchesStrategicMerge:
+  - increase-replicas.yaml
