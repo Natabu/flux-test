@@ -2,5 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  namespace: app-test
 spec:
-  replicas: 35
+  replicas: 5

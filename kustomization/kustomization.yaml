@@ -1,8 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../manifests/ingress-service.yaml
-  - ../manifests/nginx-deployment.yaml
-  - ../manifests/nginx-service.yaml
+  - istio/istio-namespace.yaml
+  - istio/istio.yaml
+  - istio/istio-gateway.yaml
+  - istio/istio-virtual-service.yaml
+  - manifests/ingress-service.yaml
+  - manifests/nginx-deployment.yaml
+  - manifests/nginx-service.yaml
+  - manifests/app-test-namespace.yaml
 patchesStrategicMerge:
   - increase-replicas.yaml

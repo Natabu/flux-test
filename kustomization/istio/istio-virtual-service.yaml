@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: app-test
+spec:
+  hosts:
+  - "app-test.com" # needs to match a host in gateway
+  gateways:
+  - app-test-gateway
+  http:
+    - route:
+      - destination:
+          port:
+            number: 80 # service port
+          host: nginx-service.app-test.svc.cluster.local # servicename.namespace.svc.cluster.local
